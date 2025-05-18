@@ -13,13 +13,14 @@ def compare(a, b):
 	return 0
 
 def bwt_encode(encoded_string: str, end: chr = '$') -> str:
+	encoded_string += end
 	strings = []
 	n = len(encoded_string)
-	for i in range(0,n):
+	for i in range(0, n):
 		strings.append(encoded_string[i:n]+encoded_string[0:i])
-	strings = sorted(strings,key=cmp_to_key(compare))
+	strings = sorted(strings, key=cmp_to_key(compare))
 	ret = ""
-	for i in range(0,n):
+	for i in range(0, n):
 		ret += strings[i][n-1]
 	return ret
 
@@ -34,18 +35,9 @@ def bwt_decode(encoded_string: str, end: chr = '$') -> str:
 	print("error, never returned")
 
 
-def mtf_decode(encoded_string, alphabet: str):
-	length = 5
-	answer = ''
-	for i in range(length):
-		pass
-
-
-
-
 def main():
 	print(bwt_decode("BNN^AA$A"))
-	print(bwt_encode("^BANANA$"))
+	print(bwt_encode("^BANANA"))
 
 
 if __name__ == "__main__":
