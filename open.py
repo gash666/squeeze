@@ -24,6 +24,15 @@ def bwt_decode(encoded_string: str, end: chr = '$') -> str:
 	print("error, never returned")
 
 
+def mtf_decode(encoded_string, alphabet: str):
+	length = 5
+	answer = ''
+	for i in range(length):
+		pass
+
+
+
+
 def main():
 	print(bwt_decode("BNN^AA$A"))
 
