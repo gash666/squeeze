@@ -9,8 +9,8 @@ def rle_decode(encoded_list):
 	return answer
 
 def main():
-	print(rle_encode("bananaaa", "abcdefghijklmnopqrstuvwxyz"))
-	print(rle_decode([1, 1, 13, 1, 1, 1, 0, 0], "abcdefghijklmnopqrstuvwxyz"))
+	print(rle_encode([[1, 1, 1, 2, 3, 5, 4, 5, 5, 5, 5]]))
+	print(rle_decode(rle_encode([[1, 1, 1, 2, 3, 5, 4, 5, 5, 5, 5]])))
 
 
 if __name__ == "__main__":
