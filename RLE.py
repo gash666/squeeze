@@ -20,7 +20,8 @@ def rle_decode(encoded_list):
 	return answer
 
 def main():
-	print(rle_encode( [1,1,1,0,3,5]))
+    print(rle_encode( [1,1,1,0,3,5]))
+    print(rle_decode(rle_encode([1,1,1,0,3,5])))
 
 if __name__ == "__main__":
     main()
