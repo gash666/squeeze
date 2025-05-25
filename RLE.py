@@ -1,3 +1,14 @@
+def rle_encode(original_string):
+    counter = 0
+    ans = []
+    original_string+="a"
+    for i in range(0,len(original_string)-1):
+        counter+=1
+        if original_string[i] != original_string[i+1]:
+            ans.append(counter)
+            ans.append(original_string[i])
+            counter = 0
+    return ans
 
 
 
@@ -12,6 +23,5 @@ def main():
 	print(rle_encode([[1, 1, 1, 2, 3, 5, 4, 5, 5, 5, 5]]))
 	print(rle_decode(rle_encode([[1, 1, 1, 2, 3, 5, 4, 5, 5, 5, 5]])))
 
-
 if __name__ == "__main__":
-	main()
+    main()
