@@ -5,7 +5,8 @@
 def rle_decode(encoded_list):
 	answer = []
 	for i in range(0, len(encoded_list), 2):
-		answer += i[]
+		answer += encoded_list[i] * [encoded_list[i + 1]]
+	return answer
 
 def main():
 	print(rle_encode("bananaaa", "abcdefghijklmnopqrstuvwxyz"))
