@@ -1,4 +1,4 @@
-
+import bitarray
 B = 12
 L = 4
 
@@ -8,7 +8,7 @@ def lwz_encode(original_string):
 
 
 def lwz_decode(encoded_list):
-	pass
+
 
 
 def main():
